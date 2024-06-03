@@ -1,0 +1,12 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "generate": {
+      "dependsOn": [],
+      "inputs": ["openapi/**/*"],
+      "outputs": ["{workspace}/dist/**/*"],
+      "cache": true,
+      "persistent": true
+    }
+  }
+}

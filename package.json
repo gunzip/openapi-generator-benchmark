@@ -1,0 +1,14 @@
+{
+  "name": "openapi-generator-benchmark",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "generate": "turbo run generate"
+  },
+  "devDependencies": {
+    "turbo": "^1.0.0"
+  }
+}
