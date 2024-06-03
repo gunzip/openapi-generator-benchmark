@@ -2130,7 +2130,6 @@ __metadata:
   resolution: "heyapi@workspace:packages/heyapi"
   dependencies:
     "@hey-api/openapi-ts": "npm:^0.46.3"
-    typescript: "npm:^5.4.5"
   languageName: unknown
   linkType: soft
 
@@ -3932,6 +3931,12 @@ __metadata:
   languageName: node
   linkType: hard
 
+"swagger-codegen@workspace:packages/swagger-codegen":
+  version: 0.0.0-use.local
+  resolution: "swagger-codegen@workspace:packages/swagger-codegen"
+  languageName: unknown
+  linkType: soft
+
 "tar@npm:^6.1.11, tar@npm:^6.1.2, tar@npm:^6.2.0":
   version: 6.2.1
   resolution: "tar@npm:6.2.1"
@@ -4192,7 +4197,6 @@ __metadata:
   resolution: "typed-openapi@workspace:packages/typed-openapi"
   dependencies:
     typed-openapi: "npm:^0.5.0"
-    typescript: "npm:^5.4.5"
     zod: "npm:^3.23.8"
   languageName: unknown
   linkType: soft
