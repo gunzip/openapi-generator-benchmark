@@ -1,6 +1,5 @@
 # openapi-generator-benchmark
 
-- typed-openapi
 - openapi-zod-client
 - openapi-typescript + openapi-fetch
 - openapi-io-ts
@@ -25,12 +24,20 @@
 
 ## Dependencies
 
-## Supports pattern
+## Supports
 
-## Support dates
+- pattern:
 
-## Support binary
+- enum:
 
-## Support securityDefinitions
+- allof:
+
+- oneof:
+
+- dates:
+
+- binary:
+
+- securityDefinitions:
 
 ## Conclusion

@@ -36,6 +36,8 @@ Very light. The generated code is very small.
 
 ## Dependencies
 
+n/a
+
 ## Supports
 
 - pattern: no

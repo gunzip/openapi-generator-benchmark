@@ -3,7 +3,7 @@
   "pipeline": {
     "generate": {
       "dependsOn": [],
-      "inputs": ["openapi/**/*"],
+      "inputs": ["openapi/**/*", "packages/**/*"],
       "outputs": ["{workspace}/dist/**/*"],
       "cache": true,
       "persistent": true
