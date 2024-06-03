@@ -51,7 +51,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@apidevtools/swagger-parser@npm:^10.1.0":
+"@apidevtools/swagger-parser@npm:^10.0.2, @apidevtools/swagger-parser@npm:^10.1.0":
   version: 10.1.0
   resolution: "@apidevtools/swagger-parser@npm:10.1.0"
   dependencies:
@@ -706,6 +706,35 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@openapi-io-ts/cli@npm:^0.5.0":
+  version: 0.5.0
+  resolution: "@openapi-io-ts/cli@npm:0.5.0"
+  dependencies:
+    "@apidevtools/swagger-parser": "npm:^10.0.2"
+    "@openapi-io-ts/core": "npm:0.1.0"
+    "@types/node": "npm:^17.0.10"
+    "@types/yargs": "npm:^16.0.0"
+    fp-ts: "npm:^2.11.0"
+    immer: "npm:^9.0.12"
+    io-ts: "npm:^2.2.0"
+    io-ts-codegen: "npm:^0.4.5"
+    openapi-types: "npm:^7.2.3"
+    yargs: "npm:^16.2.0"
+  peerDependencies:
+    typescript: ">4.0.0"
+  bin:
+    openapi-io-ts: dist/bin.js
+  checksum: 10c0/6d31041ab8792c4781b17fdb98ed7214e165d4a605ae5ce9c5011813dd53ff5087486a2d4ea2ab1162f0dcece9043bb66ea1f13ffa6e4287421854d6e2a2fa80
+  languageName: node
+  linkType: hard
+
+"@openapi-io-ts/core@npm:0.1.0":
+  version: 0.1.0
+  resolution: "@openapi-io-ts/core@npm:0.1.0"
+  checksum: 10c0/1a1a0336d4de51f21712d0e20e547f99813b8619a49b309c7effc5789a3f68df0fd6597e4b5ac7e3b566b6a26a81d89cd5a98bc8db4c95c730a907a140ab56fd
+  languageName: node
+  linkType: hard
+
 "@pkgjs/parseargs@npm:^0.11.0":
   version: 0.11.0
   resolution: "@pkgjs/parseargs@npm:0.11.0"
@@ -752,6 +781,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^17.0.10":
+  version: 17.0.45
+  resolution: "@types/node@npm:17.0.45"
+  checksum: 10c0/0db377133d709b33a47892581a21a41cd7958f22723a3cc6c71d55ac018121382de42fbfc7970d5ae3e7819dbe5f40e1c6a5174aedf7e7964e9cb8fa72b580b0
+  languageName: node
+  linkType: hard
+
 "@types/normalize-package-data@npm:^2.4.0":
   version: 2.4.4
   resolution: "@types/normalize-package-data@npm:2.4.4"
@@ -763,6 +799,22 @@ __metadata:
   version: 7.5.8
   resolution: "@types/semver@npm:7.5.8"
   checksum: 10c0/8663ff927234d1c5fcc04b33062cb2b9fcfbe0f5f351ed26c4d1e1581657deebd506b41ff7fdf89e787e3d33ce05854bc01686379b89e9c49b564c4cfa988efa
+  languageName: node
+  linkType: hard
+
+"@types/yargs-parser@npm:*":
+  version: 21.0.3
+  resolution: "@types/yargs-parser@npm:21.0.3"
+  checksum: 10c0/e71c3bd9d0b73ca82e10bee2064c384ab70f61034bbfb78e74f5206283fc16a6d85267b606b5c22cb2a3338373586786fed595b2009825d6a9115afba36560a0
+  languageName: node
+  linkType: hard
+
+"@types/yargs@npm:^16.0.0":
+  version: 16.0.9
+  resolution: "@types/yargs@npm:16.0.9"
+  dependencies:
+    "@types/yargs-parser": "npm:*"
+  checksum: 10c0/be24bd9a56c97ddb2964c1c18f5b9fe8271a50e100dc6945989901aae58f7ce6fb8f3a591c749a518401b6301358dbd1997e83c36138a297094feae7f9ac8211
   languageName: node
   linkType: hard
 
@@ -1213,6 +1265,17 @@ __metadata:
     strip-ansi: "npm:^6.0.0"
     wrap-ansi: "npm:^6.2.0"
   checksum: 10c0/35229b1bb48647e882104cac374c9a18e34bbf0bace0e2cf03000326b6ca3050d6b59545d91e17bfe3705f4a0e2988787aa5cde6331bf5cbbf0164732cef6492
+  languageName: node
+  linkType: hard
+
+"cliui@npm:^7.0.2":
+  version: 7.0.4
+  resolution: "cliui@npm:7.0.4"
+  dependencies:
+    string-width: "npm:^4.2.0"
+    strip-ansi: "npm:^6.0.0"
+    wrap-ansi: "npm:^7.0.0"
+  checksum: 10c0/6035f5daf7383470cef82b3d3db00bec70afb3423538c50394386ffbbab135e26c3689c41791f911fa71b62d13d3863c712fdd70f0fbdffd938a1e6fd09aac00
   languageName: node
   linkType: hard
 
@@ -1812,6 +1875,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fp-ts@npm:^2.11.0, fp-ts@npm:^2.16.6":
+  version: 2.16.6
+  resolution: "fp-ts@npm:2.16.6"
+  checksum: 10c0/2c02d72f5716ab4ada556d1954fa3e1d449df2cd0d91c4597723221a2ce9027d99f423cc8172e5d1ea449a869d32fa8d3f6c2943e23a15d54e744a056c820c03
+  languageName: node
+  linkType: hard
+
 "fs-extra@npm:^7.0.1":
   version: 7.0.1
   resolution: "fs-extra@npm:7.0.1"
@@ -2206,6 +2276,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"immer@npm:^9.0.12":
+  version: 9.0.21
+  resolution: "immer@npm:9.0.21"
+  checksum: 10c0/03ea3ed5d4d72e8bd428df4a38ad7e483ea8308e9a113d3b42e0ea2cc0cc38340eb0a6aca69592abbbf047c685dbda04e3d34bf2ff438ab57339ed0a34cc0a05
+  languageName: node
+  linkType: hard
+
 "imurmurhash@npm:^0.1.4":
   version: 0.1.4
   resolution: "imurmurhash@npm:0.1.4"
@@ -2228,6 +2305,34 @@ __metadata:
     hasown: "npm:^2.0.0"
     side-channel: "npm:^1.0.4"
   checksum: 10c0/f8b294a4e6ea3855fc59551bbf35f2b832cf01fd5e6e2a97f5c201a071cc09b49048f856e484b67a6c721da5e55736c5b6ddafaf19e2dbeb4a3ff1821680de6c
+  languageName: node
+  linkType: hard
+
+"io-ts-codegen@npm:^0.4.5":
+  version: 0.4.5
+  resolution: "io-ts-codegen@npm:0.4.5"
+  checksum: 10c0/fe528e9c534f6836d41aa703d8396fa5d5a8ba0deeb8882959c8d012d9e392662616e7e8ef553320366c350c82849bc368ed81a8481087dfbdcaf512f04ce3fe
+  languageName: node
+  linkType: hard
+
+"io-ts-types@npm:^0.5.19":
+  version: 0.5.19
+  resolution: "io-ts-types@npm:0.5.19"
+  peerDependencies:
+    fp-ts: ^2.0.0
+    io-ts: ^2.0.0
+    monocle-ts: ^2.0.0
+    newtype-ts: ^0.3.2
+  checksum: 10c0/f7c451f6444660707f02de2dbf9c3c4bca4e9ed3b2f46e10f19ea5dcaa6acef9936d3b24025598d9f59e0647ea704263ba580506a2db3d64cc6d0c7b2b0fcf35
+  languageName: node
+  linkType: hard
+
+"io-ts@npm:^2.2.0, io-ts@npm:^2.2.21":
+  version: 2.2.21
+  resolution: "io-ts@npm:2.2.21"
+  peerDependencies:
+    fp-ts: ^2.5.0
+  checksum: 10c0/4e59e2135c26ced17f9c357c554486e716ac4c75d9bf69164702f66d41400e165786b0d653263bcd2afb4dee947bff4eb7869899ec810050ef067307764f6c32
   languageName: node
   linkType: hard
 
@@ -3055,6 +3160,24 @@ __metadata:
     typescript: "npm:^5.4.5"
   languageName: unknown
   linkType: soft
+
+"openapi-io-ts@workspace:packages/openapi-io-ts":
+  version: 0.0.0-use.local
+  resolution: "openapi-io-ts@workspace:packages/openapi-io-ts"
+  dependencies:
+    "@openapi-io-ts/cli": "npm:^0.5.0"
+    fp-ts: "npm:^2.16.6"
+    io-ts: "npm:^2.2.21"
+    io-ts-types: "npm:^0.5.19"
+  languageName: unknown
+  linkType: soft
+
+"openapi-types@npm:^7.2.3":
+  version: 7.2.3
+  resolution: "openapi-types@npm:7.2.3"
+  checksum: 10c0/1de1a09891ec30d1db7ad0740fcdc483cce6504f7b0cdd4e3e33dc523a346f6217d398df507ff8b7bffe001ebb03ab75e1a740bc19f570e26bfc1a751ac1249f
+  languageName: node
+  linkType: hard
 
 "openapi3-ts@npm:^4.1.2":
   version: 4.3.2
@@ -4486,6 +4609,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"yargs-parser@npm:^20.2.2":
+  version: 20.2.9
+  resolution: "yargs-parser@npm:20.2.9"
+  checksum: 10c0/0685a8e58bbfb57fab6aefe03c6da904a59769bd803a722bb098bd5b0f29d274a1357762c7258fb487512811b8063fb5d2824a3415a0a4540598335b3b086c72
+  languageName: node
+  linkType: hard
+
 "yargs-parser@npm:^21.1.1":
   version: 21.1.1
   resolution: "yargs-parser@npm:21.1.1"
@@ -4509,6 +4639,21 @@ __metadata:
     y18n: "npm:^4.0.0"
     yargs-parser: "npm:^18.1.2"
   checksum: 10c0/f1ca680c974333a5822732825cca7e95306c5a1e7750eb7b973ce6dc4f97a6b0a8837203c8b194f461969bfe1fb1176d1d423036635285f6010b392fa498ab2d
+  languageName: node
+  linkType: hard
+
+"yargs@npm:^16.2.0":
+  version: 16.2.0
+  resolution: "yargs@npm:16.2.0"
+  dependencies:
+    cliui: "npm:^7.0.2"
+    escalade: "npm:^3.1.1"
+    get-caller-file: "npm:^2.0.5"
+    require-directory: "npm:^2.1.1"
+    string-width: "npm:^4.2.0"
+    y18n: "npm:^5.0.5"
+    yargs-parser: "npm:^20.2.2"
+  checksum: 10c0/b1dbfefa679848442454b60053a6c95d62f2d2e21dd28def92b647587f415969173c6e99a0f3bab4f1b67ee8283bf735ebe3544013f09491186ba9e8a9a2b651
   languageName: node
   linkType: hard
 

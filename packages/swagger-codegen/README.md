@@ -32,20 +32,22 @@ One big file.
 
 ## Supports
 
-- pattern:
+- pattern: no
 
-- enum:
+- enum: no
 
-- max/min:
+- max/min: no
 
-- allof:
+- allof: no
 
-- oneof:
+- oneof: no
 
-- dates:
+- dates: no
 
-- binary:
+- binary: no
 
-- securityDefinitions:
+- securityDefinitions: no
 
 ## Conclusion
+
+Generated client its crap. It's not even typescript. It's just a big file with `any` everywhere.

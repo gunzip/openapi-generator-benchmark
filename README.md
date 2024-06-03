@@ -2,9 +2,7 @@
 
 - openapi-zod-client
 - openapi-typescript + openapi-fetch
-- openapi-io-ts
 - autorest
-- https://swagger.io/tools/swagger-codegen/
 - https://openapi-generator.tech/
 - https://orval.dev/
 
