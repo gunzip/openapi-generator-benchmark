@@ -1,0 +1,11 @@
+{
+  "name": "openapi-box",
+  "version": "1.0.0",
+  "scripts": {
+    "generate": "openapi-box ../../openapi/api.json"
+  },
+  "devDependencies": {
+    "@geut/openapi-box": "^4.0.0",
+    "@sinclair/typebox": "^0.32.31"
+  }
+}

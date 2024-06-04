@@ -1,41 +1,19 @@
 # openapi-generator-benchmark
 
+- openapi-box
 - openapi-zod-client
 - openapi-typescript + openapi-fetch
 - autorest
 - https://openapi-generator.tech/
 - https://orval.dev/
 
-## GitHub star
+## Resources
 
-## Last commit
+- https://github.com/dsherret/code-block-writer
+- https://github.com/sinclairzx81/typebox
+- https://github.com/kogosoftwarellc/open-api/tree/main/packages/openapi-types
+- https://github.com/APIDevTools/swagger-parser
 
-## Works on our specs
+## TODO
 
-## Generate server types
-
-## Has runtime checks
-
-## Code quality and extensibility
-
-## Footprint
-
-## Dependencies
-
-## Supports
-
-- pattern:
-
-- enum:
-
-- allof:
-
-- oneof:
-
-- dates:
-
-- binary:
-
-- securityDefinitions:
-
-## Conclusion
+- [ ] Benchmark typebox vs zod vs io-ts
