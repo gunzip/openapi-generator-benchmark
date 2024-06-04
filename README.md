@@ -1,6 +1,5 @@
 # openapi-generator-benchmark
 
-- openapi-box
 - openapi-zod-client
 - openapi-typescript + openapi-fetch
 - autorest
