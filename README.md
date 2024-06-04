@@ -1,5 +1,9 @@
 # openapi-generator-benchmark
 
+```sh
+yarn generate
+```
+
 - openapi-zod-client
 - openapi-typescript + openapi-fetch
 - autorest
@@ -15,4 +19,4 @@
 
 ## TODO
 
-- [ ] Benchmark typebox vs zod vs io-ts
+- [ ] Benchmark typebox vs zod vs io-ts (with footprint)

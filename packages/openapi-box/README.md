@@ -4,11 +4,11 @@
 
 ## GitHub star
 
-36
+13
 
 ## Last commit
 
-Last year.
+2 weeks ago.
 
 ## Works on our specs
 
