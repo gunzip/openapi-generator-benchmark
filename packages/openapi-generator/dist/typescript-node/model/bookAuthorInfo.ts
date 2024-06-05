@@ -21,6 +21,8 @@ export class BookAuthorInfo {
     'address'?: PersonAddress;
     'birth'?: Date;
     'death'?: string;
+    'age'?: BookAuthorInfo.AgeEnum;
+    'zipCode'?: string;
 
     static discriminator: string | undefined = undefined;
 
@@ -44,6 +46,16 @@ export class BookAuthorInfo {
             "name": "death",
             "baseName": "death",
             "type": "string"
+        },
+        {
+            "name": "age",
+            "baseName": "age",
+            "type": "BookAuthorInfo.AgeEnum"
+        },
+        {
+            "name": "zipCode",
+            "baseName": "zipCode",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
@@ -51,3 +63,10 @@ export class BookAuthorInfo {
     }
 }
 
+export namespace BookAuthorInfo {
+    export enum AgeEnum {
+        NUMBER_20 = <any> 20,
+        NUMBER_40 = <any> 40,
+        NUMBER_50 = <any> 50
+    }
+}

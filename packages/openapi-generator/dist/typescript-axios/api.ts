@@ -319,7 +319,28 @@ export interface BookAuthorInfo {
      * @memberof BookAuthorInfo
      */
     'death'?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof BookAuthorInfo
+     */
+    'age'?: BookAuthorInfoAgeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BookAuthorInfo
+     */
+    'zipCode'?: string;
 }
+
+export const BookAuthorInfoAgeEnum = {
+    NUMBER_20: 20,
+    NUMBER_40: 40,
+    NUMBER_50: 50
+} as const;
+
+export type BookAuthorInfoAgeEnum = typeof BookAuthorInfoAgeEnum[keyof typeof BookAuthorInfoAgeEnum];
+
 /**
  * 
  * @export
@@ -699,7 +720,28 @@ export interface Person {
      * @memberof Person
      */
     'death'?: string;
+    /**
+     * 
+     * @type {number}
+     * @memberof Person
+     */
+    'age'?: PersonAgeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof Person
+     */
+    'zipCode'?: string;
 }
+
+export const PersonAgeEnum = {
+    NUMBER_20: 20,
+    NUMBER_40: 40,
+    NUMBER_50: 50
+} as const;
+
+export type PersonAgeEnum = typeof PersonAgeEnum[keyof typeof PersonAgeEnum];
+
 /**
  * 
  * @export

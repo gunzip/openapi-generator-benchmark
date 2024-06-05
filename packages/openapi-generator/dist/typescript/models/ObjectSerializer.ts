@@ -40,7 +40,7 @@ import { AnObjectWithAnItemsField } from '../models/AnObjectWithAnItemsField';
 import { AnObjectWithRefImport } from '../models/AnObjectWithRefImport';
 import { Book } from '../models/Book';
 import { BookAuthor } from '../models/BookAuthor';
-import { BookAuthorInfo } from '../models/BookAuthorInfo';
+import { BookAuthorInfo    , BookAuthorInfoAgeEnum    } from '../models/BookAuthorInfo';
 import { ConstantIntegerTest } from '../models/ConstantIntegerTest';
 import { DefinitionFieldWithDash } from '../models/DefinitionFieldWithDash';
 import { DisabledUserTest, DisabledUserTestEnabledEnum     } from '../models/DisabledUserTest';
@@ -61,7 +61,7 @@ import { OneOfTest } from '../models/OneOfTest';
 import { OneOfTestOneOf } from '../models/OneOfTestOneOf';
 import { OneOfTestOneOf1 } from '../models/OneOfTestOneOf1';
 import { PaginationResponse } from '../models/PaginationResponse';
-import { Person } from '../models/Person';
+import { Person    , PersonAgeEnum    } from '../models/Person';
 import { PersonAddress } from '../models/PersonAddress';
 import { Profile } from '../models/Profile';
 import { SimpleDefinition } from '../models/SimpleDefinition';
@@ -79,6 +79,7 @@ let primitives = [
                  ];
 
 let enumsMap: Set<string> = new Set<string>([
+    "BookAuthorInfoAgeEnum",
     "ConstantIntegerTest",
     "DisabledUserTestEnabledEnum",
     "DisjointUnionsUserTestEnabledEnum",
@@ -86,6 +87,7 @@ let enumsMap: Set<string> = new Set<string>([
     "EnumFalseTestFlagEnum",
     "EnumTestStatusEnum",
     "EnumTrueTestFlagEnum",
+    "PersonAgeEnum",
 ]);
 
 let typeMap: {[index: string]: any} = {

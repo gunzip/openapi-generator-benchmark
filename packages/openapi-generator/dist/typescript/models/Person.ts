@@ -21,6 +21,8 @@ export class Person {
     'address'?: PersonAddress;
     'birth'?: Date;
     'death'?: string;
+    'age'?: PersonAgeEnum;
+    'zipCode'?: string;
 
     static readonly discriminator: string | undefined = undefined;
 
@@ -48,6 +50,18 @@ export class Person {
             "baseName": "death",
             "type": "string",
             "format": "date"
+        },
+        {
+            "name": "age",
+            "baseName": "age",
+            "type": "PersonAgeEnum",
+            "format": ""
+        },
+        {
+            "name": "zipCode",
+            "baseName": "zipCode",
+            "type": "string",
+            "format": ""
         }    ];
 
     static getAttributeTypeMap() {
@@ -56,5 +70,12 @@ export class Person {
 
     public constructor() {
     }
+}
+
+
+export enum PersonAgeEnum {
+    NUMBER_20 = 20,
+    NUMBER_40 = 40,
+    NUMBER_50 = 50
 }
 

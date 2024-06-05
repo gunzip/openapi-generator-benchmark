@@ -46,4 +46,16 @@ export interface Person {
      * @memberof Person
      */
     death?: any;
+
+    /**
+     * @type {any}
+     * @memberof Person
+     */
+    age?: any;
+
+    /**
+     * @type {any}
+     * @memberof Person
+     */
+    zipCode?: any;
 }

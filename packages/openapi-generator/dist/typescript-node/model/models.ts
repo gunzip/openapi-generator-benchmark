@@ -94,6 +94,7 @@ let primitives = [
                  ];
 
 let enumsMap: {[index: string]: any} = {
+        "BookAuthorInfo.AgeEnum": BookAuthorInfo.AgeEnum,
         "ConstantIntegerTest": ConstantIntegerTest,
         "DisabledUserTest.EnabledEnum": DisabledUserTest.EnabledEnum,
         "DisjointUnionsUserTest.EnabledEnum": DisjointUnionsUserTest.EnabledEnum,
@@ -101,6 +102,7 @@ let enumsMap: {[index: string]: any} = {
         "EnumFalseTest.FlagEnum": EnumFalseTest.FlagEnum,
         "EnumTest.StatusEnum": EnumTest.StatusEnum,
         "EnumTrueTest.FlagEnum": EnumTrueTest.FlagEnum,
+        "Person.AgeEnum": Person.AgeEnum,
 }
 
 let typeMap: {[index: string]: any} = {

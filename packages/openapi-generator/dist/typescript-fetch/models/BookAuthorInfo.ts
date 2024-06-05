@@ -50,7 +50,31 @@ export interface BookAuthorInfo {
      * @memberof BookAuthorInfo
      */
     death?: Date;
+    /**
+     * 
+     * @type {number}
+     * @memberof BookAuthorInfo
+     */
+    age?: BookAuthorInfoAgeEnum;
+    /**
+     * 
+     * @type {string}
+     * @memberof BookAuthorInfo
+     */
+    zipCode?: string;
 }
+
+
+/**
+ * @export
+ */
+export const BookAuthorInfoAgeEnum = {
+    NUMBER_20: 20,
+    NUMBER_40: 40,
+    NUMBER_50: 50
+} as const;
+export type BookAuthorInfoAgeEnum = typeof BookAuthorInfoAgeEnum[keyof typeof BookAuthorInfoAgeEnum];
+
 
 /**
  * Check if a given object implements the BookAuthorInfo interface.
@@ -73,6 +97,8 @@ export function BookAuthorInfoFromJSONTyped(json: any, ignoreDiscriminator: bool
         'address': json['address'] == null ? undefined : PersonAddressFromJSON(json['address']),
         'birth': json['birth'] == null ? undefined : (new Date(json['birth'])),
         'death': json['death'] == null ? undefined : (new Date(json['death'])),
+        'age': json['age'] == null ? undefined : json['age'],
+        'zipCode': json['zipCode'] == null ? undefined : json['zipCode'],
     };
 }
 
@@ -86,6 +112,8 @@ export function BookAuthorInfoToJSON(value?: BookAuthorInfo | null): any {
         'address': PersonAddressToJSON(value['address']),
         'birth': value['birth'] == null ? undefined : ((value['birth']).toISOString()),
         'death': value['death'] == null ? undefined : ((value['death']).toISOString().substring(0,10)),
+        'age': value['age'],
+        'zipCode': value['zipCode'],
     };
 }
 

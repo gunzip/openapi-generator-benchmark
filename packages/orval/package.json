@@ -1,0 +1,13 @@
+{
+  "name": "orval",
+  "version": "1.0.0",
+  "scripts": {
+    "generate": "orval --config ./orval.config.js"
+  },
+  "devDependencies": {
+    "orval": "^6.29.1"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  }
+}

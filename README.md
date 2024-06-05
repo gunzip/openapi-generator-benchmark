@@ -7,7 +7,6 @@ yarn generate
 - openapi-zod-client
 - openapi-typescript + openapi-fetch
 - autorest
-- https://openapi-generator.tech/
 - https://orval.dev/
 
 ## Resources

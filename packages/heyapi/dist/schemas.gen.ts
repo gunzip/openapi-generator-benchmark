@@ -29,6 +29,14 @@ export const $Person = {
         death: {
             type: 'string',
             format: 'date'
+        },
+        age: {
+            type: 'integer',
+            enum: [20, 40, 50]
+        },
+        zipCode: {
+            type: 'string',
+            pattern: '[0-9]+'
         }
     }
 } as const;

@@ -46,4 +46,16 @@ export interface BookAuthorInfo {
      * @memberof BookAuthorInfo
      */
     death?: any;
+
+    /**
+     * @type {any}
+     * @memberof BookAuthorInfo
+     */
+    age?: any;
+
+    /**
+     * @type {any}
+     * @memberof BookAuthorInfo
+     */
+    zipCode?: any;
 }

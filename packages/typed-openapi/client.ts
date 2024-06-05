@@ -12,6 +12,8 @@ export const Person = z.object({
     .optional(),
   birth: z.string().optional(),
   death: z.string().optional(),
+  age: z.union([z.literal(20), z.literal(40), z.literal(50)]).optional(),
+  zipCode: z.string().optional(),
 });
 
 export type Book = z.infer<typeof Book>;

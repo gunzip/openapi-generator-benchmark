@@ -12,7 +12,11 @@ export type Person = {
     };
     birth?: string;
     death?: string;
+    age?: 20 | 40 | 50;
+    zipCode?: string;
 };
+
+export type age = 20 | 40 | 50;
 
 export type Book = {
     /**
