@@ -1,0 +1,12 @@
+{
+  "name": "openapi-typescript",
+  "version": "1.0.0",
+  "scripts": {
+    "generate": "openapi-typescript ../../openapi/api.yaml -o dist/schema.ts"
+  },
+  "devDependencies": {
+    "openapi-fetch": "^0.9.7",
+    "openapi-typescript": "^7.0.0-rc.0",
+    "typescript": "^5.4.5"
+  }
+}

@@ -5,9 +5,7 @@ yarn generate
 ```
 
 - openapi-zod-client
-- openapi-typescript + openapi-fetch
 - autorest
-- https://orval.dev/
 
 ## Resources
 
@@ -19,3 +17,4 @@ yarn generate
 ## TODO
 
 - [ ] Benchmark typebox vs zod vs io-ts (with footprint)
+- [ ] Benchmark openapi-typescript vs openapi-zod-client
