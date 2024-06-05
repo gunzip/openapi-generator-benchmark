@@ -1855,6 +1855,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"autorest@npm:^3.7.1":
+  version: 3.7.1
+  resolution: "autorest@npm:3.7.1"
+  bin:
+    autorest: entrypoints/app.js
+  checksum: 10c0/575f2b721763cd41ac494f49ef92280394fc056da62a50951772f5a13990704e05e20daf892e3c6554c64e5aa743fc65d227a1fe075c148517f30477b46bc68e
+  languageName: node
+  linkType: hard
+
+"autorest@workspace:packages/autorest":
+  version: 0.0.0-use.local
+  resolution: "autorest@workspace:packages/autorest"
+  dependencies:
+    autorest: "npm:^3.7.1"
+  languageName: unknown
+  linkType: soft
+
 "available-typed-arrays@npm:^1.0.7":
   version: 1.0.7
   resolution: "available-typed-arrays@npm:1.0.7"

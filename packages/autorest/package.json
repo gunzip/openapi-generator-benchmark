@@ -1,0 +1,10 @@
+{
+  "name": "autorest",
+  "version": "1.0.0",
+  "scripts": {
+    "generate:broken": "autorest --typescript --input-file=../../openapi/api30.yaml --output-folder=dist --clear-output-folder"
+  },
+  "devDependencies": {
+    "autorest": "^3.7.1"
+  }
+}
