@@ -4,9 +4,6 @@
 yarn generate
 ```
 
-- openapi-zod-client
-- autorest
-
 ## Resources
 
 - https://github.com/dsherret/code-block-writer

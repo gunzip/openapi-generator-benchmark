@@ -1,0 +1,14 @@
+{
+  "name": "openapi-zod-client",
+  "version": "1.0.0",
+  "scripts": {
+    "generate": "openapi-zod-client ../../openapi/api.yaml --output ./dist/client.ts --export-schemas"
+  },
+  "devDependencies": {
+    "openapi-zod-client": "^1.18.1"
+  },
+  "dependencies": {
+    "@zodios/core": "^10.9.6",
+    "zod": "^3.23.8"
+  }
+}

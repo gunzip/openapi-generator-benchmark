@@ -5,11 +5,12 @@
   "workspaces": [
     "packages/*"
   ],
+  "packageManager": "yarn@4.1.1",
   "scripts": {
     "generate": "turbo run generate"
   },
   "devDependencies": {
-    "turbo": "^1.0.0"
+    "turbo": "^2.0.0"
   },
   "dependencies": {
     "typescript": "^5.4.5"
