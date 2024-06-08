@@ -12,13 +12,23 @@
 
 ## Works on our specs
 
+Yes
+
 ## Generate server types
+
+Yes
 
 ## Has runtime checks
 
+Yes
+
 ## Code quality and extensibility
 
+Overall decent, customizable through templates.
+
 ## Footprint
+
+One big object needs to be passed to the zodios instance.
 
 ## Dependencies
 
@@ -38,7 +48,7 @@
 
 - binary: yes
 
-- securityDefinitions:
+- securityDefinitions: no
 
 ## Conclusion
 
