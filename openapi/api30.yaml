@@ -199,11 +199,11 @@ paths:
           description: "Created"
         500:
           description: "Fatal error"
-  /test-parameter-with-dash/{path-param}:
+  /test-parameter-with-dash/{path_param}:
     get:
       operationId: "testParameterWithDash"
       parameters:
-        - name: path-param
+        - name: path_param
           in: path
           required: true
           schema:
@@ -224,11 +224,11 @@ paths:
           description: "Ok"
         "500":
           description: "Fatal error"
-  /test-parameter-with-dash-and_underscore/{path-param}:
+  /test-parameter-with-dash-and_underscore/{path_param}:
     get:
       operationId: "testParameterWithDashAnUnderscore"
       parameters:
-        - name: path-param
+        - name: path_param
           required: true
           in: path
           schema:
@@ -249,16 +249,16 @@ paths:
           description: "Ok"
         "500":
           description: "Fatal error"
-  /test-two-path-params/{first-param}/{second-param}:
+  /test-two-path_params/{first_param}/{second_param}:
     get:
       operationId: "testWithTwoParams"
       parameters:
-        - name: first-param
+        - name: first_param
           required: true
           in: path
           schema:
             type: string
-        - name: second-param
+        - name: second_param
           required: true
           in: path
           schema:
