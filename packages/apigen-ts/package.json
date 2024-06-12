@@ -1,0 +1,10 @@
+{
+  "name": "apigen-ts",
+  "version": "1.0.0",
+  "scripts": {
+    "generate": "apigen-ts ../../openapi/api.yaml dist/client.ts"
+  },
+  "devDependencies": {
+    "apigen-ts": "^0.1.2"
+  }
+}

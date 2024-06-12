@@ -2458,6 +2458,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@redocly/config@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "@redocly/config@npm:0.6.0"
+  checksum: 10c0/0490d9ccf8eedd7b2f1cd5fc83e4f565315b2206038889d29812df1f47b36bc5935f3818d20d4da8d5e020838cd6ca1fb92858b539a46da52b71a9c28eedead5
+  languageName: node
+  linkType: hard
+
 "@redocly/openapi-core@npm:^1.12.2":
   version: 1.14.0
   resolution: "@redocly/openapi-core@npm:1.14.0"
@@ -2473,6 +2480,24 @@ __metadata:
     pluralize: "npm:^8.0.0"
     yaml-ast-parser: "npm:0.0.43"
   checksum: 10c0/ab15c7ccd62499e23f5a7011b327368bd9132fd48c252057576badac601a0cb98147f62e2e8b6a72b32c89cc36459eca665d1eafb83d134eea93cefa7f6e38cc
+  languageName: node
+  linkType: hard
+
+"@redocly/openapi-core@npm:^1.6.0":
+  version: 1.15.0
+  resolution: "@redocly/openapi-core@npm:1.15.0"
+  dependencies:
+    "@redocly/ajv": "npm:^8.11.0"
+    "@redocly/config": "npm:^0.6.0"
+    colorette: "npm:^1.2.0"
+    js-levenshtein: "npm:^1.1.6"
+    js-yaml: "npm:^4.1.0"
+    lodash.isequal: "npm:^4.5.0"
+    minimatch: "npm:^5.0.1"
+    node-fetch: "npm:^2.6.1"
+    pluralize: "npm:^8.0.0"
+    yaml-ast-parser: "npm:0.0.43"
+  checksum: 10c0/9bd458732673c197a3c431f631183466afa3ee838f09f9cca614cc336c734c456294a32c0cb593c0ec50b32107ab5ee6bf790dea6f5fdd042c97f9e3f093ef56
   languageName: node
   linkType: hard
 
@@ -2997,6 +3022,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/lodash-es@npm:^4.17.12":
+  version: 4.17.12
+  resolution: "@types/lodash-es@npm:4.17.12"
+  dependencies:
+    "@types/lodash": "npm:*"
+  checksum: 10c0/5d12d2cede07f07ab067541371ed1b838a33edb3c35cb81b73284e93c6fd0c4bbeaefee984e69294bffb53f62d7272c5d679fdba8e595ff71e11d00f2601dde0
+  languageName: node
+  linkType: hard
+
+"@types/lodash@npm:*":
+  version: 4.17.5
+  resolution: "@types/lodash@npm:4.17.5"
+  checksum: 10c0/55924803ed853e72261512bd3eaf2c5b16558c3817feb0a3125ef757afe46e54b86f33d1960e40b7606c0ddab91a96f47966bf5e6006b7abfd8994c13b04b19b
+  languageName: node
+  linkType: hard
+
 "@types/minimist@npm:^1.2.0":
   version: 1.2.5
   resolution: "@types/minimist@npm:1.2.5"
@@ -3052,6 +3093,16 @@ __metadata:
   version: 2.0.25
   resolution: "@types/swagger-schema-official@npm:2.0.25"
   checksum: 10c0/688669a509d8e6c93aa8bf99ce1a02fd6429e6e4e0948be2e08528b1a2c9b710e9d40051b7620da80cc80783219f1d6808012c9738be02664cc5c4af3db1d26b
+  languageName: node
+  linkType: hard
+
+"@types/swagger2openapi@npm:^7.0.4":
+  version: 7.0.4
+  resolution: "@types/swagger2openapi@npm:7.0.4"
+  dependencies:
+    "@types/node": "npm:*"
+    openapi-types: "npm:^12.1.0"
+  checksum: 10c0/bd13f18f64cb4e8e15ef15e005b85422d929a792a4f32217dd476caa2efc8d0241aac22914c53addb94711455e7a353973d6383290e06bd69c73468f0b29898d
   languageName: node
   linkType: hard
 
@@ -3369,6 +3420,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"apigen-ts@npm:^0.1.2":
+  version: 0.1.2
+  resolution: "apigen-ts@npm:0.1.2"
+  dependencies:
+    "@redocly/openapi-core": "npm:^1.6.0"
+    "@types/lodash-es": "npm:^4.17.12"
+    "@types/swagger2openapi": "npm:^7.0.4"
+    array-utils-ts: "npm:^0.1.2"
+    cleye: "npm:^1.3.2"
+    lodash-es: "npm:^4.17.21"
+    swagger2openapi: "npm:^7.0.8"
+  peerDependencies:
+    prettier: ^3.0.0
+    typescript: ^5.0.0
+  bin:
+    apigen-ts: dist/cli.js
+  checksum: 10c0/c85776de453c14dfb9e88a526802b5d84e38c8df612e954a6670a479d89ca6e99cf7b258004b180a8413b132cfae483ab91962fe83eb93c75a5e5ea6a536616f
+  languageName: node
+  linkType: hard
+
+"apigen-ts@workspace:packages/apigen-ts":
+  version: 0.0.0-use.local
+  resolution: "apigen-ts@workspace:packages/apigen-ts"
+  dependencies:
+    apigen-ts: "npm:^0.1.2"
+  languageName: unknown
+  linkType: soft
+
 "aproba@npm:^1.0.3 || ^2.0.0, aproba@npm:^2.0.0":
   version: 2.0.0
   resolution: "aproba@npm:2.0.0"
@@ -3444,6 +3523,13 @@ __metadata:
   version: 2.1.0
   resolution: "array-union@npm:2.1.0"
   checksum: 10c0/429897e68110374f39b771ec47a7161fc6a8fc33e196857c0a396dc75df0b5f65e4d046674db764330b6bb66b39ef48dd7c53b6a2ee75cfb0681e0c1a7033962
+  languageName: node
+  linkType: hard
+
+"array-utils-ts@npm:^0.1.2":
+  version: 0.1.2
+  resolution: "array-utils-ts@npm:0.1.2"
+  checksum: 10c0/9c00771e0bcf68ab9d6f82b81a15ea5235d1b6ef964d6257abc2ad6dd0f3096194300be72aee39dab40dfa87f8f2ea4d5e6d442f5cf91f94d4aa288b6b5c85b7
   languageName: node
   linkType: hard
 
@@ -4162,6 +4248,16 @@ __metadata:
   dependencies:
     escape-string-regexp: "npm:4.0.0"
   checksum: 10c0/4ea5c03bdf78e8afb2592f34c1b5832d0c7858d37d8b0d40fba9d61a103508fa3bb527d39a99469019083e58e05d1ad54447e04217d5d36987e97182adab0e03
+  languageName: node
+  linkType: hard
+
+"cleye@npm:^1.3.2":
+  version: 1.3.2
+  resolution: "cleye@npm:1.3.2"
+  dependencies:
+    terminal-columns: "npm:^1.4.1"
+    type-flag: "npm:^3.0.0"
+  checksum: 10c0/2cd63c194d8476230cb9730dae87ae106995ff36b5e43436965caf14ebc6386b7a33e61cc12f90f27e42f4490383fb6032f1f1956bbbc12a3bb13e5cc74cbd78
   languageName: node
   linkType: hard
 
@@ -8197,6 +8293,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lodash-es@npm:^4.17.21":
+  version: 4.17.21
+  resolution: "lodash-es@npm:4.17.21"
+  checksum: 10c0/fb407355f7e6cd523a9383e76e6b455321f0f153a6c9625e21a8827d10c54c2a2341bd2ae8d034358b60e07325e1330c14c224ff582d04612a46a4f0479ff2f2
+  languageName: node
+  linkType: hard
+
 "lodash.get@npm:^4.4.2":
   version: 4.4.2
   resolution: "lodash.get@npm:4.4.2"
@@ -11667,6 +11770,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"terminal-columns@npm:^1.4.1":
+  version: 1.4.1
+  resolution: "terminal-columns@npm:1.4.1"
+  checksum: 10c0/e79135b0e9605d247ac26addf2afc0a4313ca4b70e6ff5b8571ab95c93703ab60db5b7b8a61a715e0ea5b6067434cfe1ae58f4392e01ad86c514b347a2a34e34
+  languageName: node
+  linkType: hard
+
 "test-exclude@npm:^6.0.0":
   version: 6.0.0
   resolution: "test-exclude@npm:6.0.0"
@@ -12102,6 +12212,13 @@ __metadata:
   version: 4.19.0
   resolution: "type-fest@npm:4.19.0"
   checksum: 10c0/bd5f96142ea6cc436b75bc2ac0b672d70dfd55ed6986ef76f25165517984bda475bb5d2ee674470a7c5ce0348837627f5e87d9aef1158ba4fb9b36dd10fa2225
+  languageName: node
+  linkType: hard
+
+"type-flag@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "type-flag@npm:3.0.0"
+  checksum: 10c0/b1015d4eb18cd85432fa3bcd0228149dd6893a9c1360a2ad619f79b72e19acfb648a932e2a9ccf2e2db0f0c4b86385bd886a3364e221afb116424e0ae6d1b1ba
   languageName: node
   linkType: hard
 
