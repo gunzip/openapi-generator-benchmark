@@ -1,0 +1,16 @@
+{
+  "name": "openapi-backend",
+  "version": "1.0.0",
+  "scripts": {
+    "generate": "openapi typegen ../../openapi/api30.yaml > dist/client.ts"
+  },
+  "devDependencies": {
+    "lodash": "^4.17.21",
+    "openapi-backend": "^5.10.6",
+    "openapicmd": "^2.3.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "openapi-client-axios": "^7.5.5"
+  }
+}
