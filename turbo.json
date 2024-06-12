@@ -5,8 +5,7 @@
       "dependsOn": [],
       "inputs": ["openapi/**/*", "packages/**/*"],
       "outputs": ["{workspace}/dist/**/*"],
-      "cache": true,
-      "persistent": true
+      "cache": true
     }
   }
 }

@@ -1052,6 +1052,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@oazapfts/runtime@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "@oazapfts/runtime@npm:1.0.3"
+  checksum: 10c0/b7cefcd8f13957a7434e89ac17d311217a202b2bf2e2959f4b14c1a24515b02795106a4707dfc66beaff1dc29efbbeb3722ea349d01f236335996a8173e2d7e3
+  languageName: node
+  linkType: hard
+
 "@oclif/core@npm:>=3.26.0":
   version: 4.0.3
   resolution: "@oclif/core@npm:4.0.3"
@@ -1671,6 +1678,41 @@ __metadata:
   peerDependencies:
     typescript: "*"
   checksum: 10c0/266b1c045feddadf36f420ee53a5bc7d8a6ddea13c1851422ec7c43a321c7ab00b6099ebae040a6b1239bbac69bf354b86254829328e19305979716167a6c052
+  languageName: node
+  linkType: hard
+
+"@typoas/cli@npm:^3.1.6":
+  version: 3.1.6
+  resolution: "@typoas/cli@npm:3.1.6"
+  dependencies:
+    "@typoas/generator": "npm:^3.1.6"
+    clipanion: "npm:^4.0.0-rc.3"
+    js-yaml: "npm:^4.1.0"
+    prettier: "npm:^3.2.5"
+    typanion: "npm:^3.14.0"
+  bin:
+    typoas-cli: ./lib/bin.js
+  checksum: 10c0/d2d4b927fc1125109b6cb7a0b091698175db19c3b8939fe2ac6480fc557de0d50932be9df0fe5b7151c790d3d9f9072932efc18c236a09eff7c5981bc193fdeb
+  languageName: node
+  linkType: hard
+
+"@typoas/generator@npm:^3.1.6":
+  version: 3.1.7
+  resolution: "@typoas/generator@npm:3.1.7"
+  dependencies:
+    lodash: "npm:^4.17.21"
+    openapi3-ts: "npm:^4.2.2"
+    typescript: "npm:^5.3.3"
+  checksum: 10c0/956aa555ce524d5ca6e654b8c36e20ea28b4fc304c408840a191efc55fd29eebec6be307203d22141dc2a63eff23a3a99edd3c0d14edbf8850ef1b99a7e45264
+  languageName: node
+  linkType: hard
+
+"@typoas/runtime@npm:^3.1.7":
+  version: 3.1.7
+  resolution: "@typoas/runtime@npm:3.1.7"
+  dependencies:
+    query-string: "npm:^7.1.3"
+  checksum: 10c0/27d59ed7bd8af8dd7c46ccd10a029cac9b3f5777883651f4f2b9d69b211d9342542c7e52a6aebfc00d701c3d4d4bc72f4922cf76dc0419f66bd16804d943ac42
   languageName: node
   linkType: hard
 
@@ -2373,6 +2415,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"clipanion@npm:^4.0.0-rc.3":
+  version: 4.0.0-rc.3
+  resolution: "clipanion@npm:4.0.0-rc.3"
+  dependencies:
+    typanion: "npm:^3.8.0"
+  peerDependencies:
+    typanion: "*"
+  checksum: 10c0/5171fd04539b39b5483bd097d5f828da165fa47b4718378cb0bc3c2f70dfa11736f01727cfa4b9566fc8eabad03473e62ae98470c4c8d15c618ee1294e07169f
+  languageName: node
+  linkType: hard
+
 "cliui@npm:^6.0.0":
   version: 6.0.0
   resolution: "cliui@npm:6.0.0"
@@ -2698,6 +2751,13 @@ __metadata:
   version: 1.2.0
   resolution: "decamelize@npm:1.2.0"
   checksum: 10c0/85c39fe8fbf0482d4a1e224ef0119db5c1897f8503bcef8b826adff7a1b11414972f6fef2d7dec2ee0b4be3863cf64ac1439137ae9e6af23a3d8dcbe26a5b4b2
+  languageName: node
+  linkType: hard
+
+"decode-uri-component@npm:^0.2.2":
+  version: 0.2.2
+  resolution: "decode-uri-component@npm:0.2.2"
+  checksum: 10c0/1f4fa54eb740414a816b3f6c24818fbfcabd74ac478391e9f4e2282c994127db02010ce804f3d08e38255493cfe68608b3f5c8e09fd6efc4ae46c807691f7a31
   languageName: node
   linkType: hard
 
@@ -3318,6 +3378,13 @@ __metadata:
   dependencies:
     to-regex-range: "npm:^5.0.1"
   checksum: 10c0/b75b691bbe065472f38824f694c2f7449d7f5004aa950426a2c28f0306c60db9b880c0b0e4ed819997ffb882d1da02cfcfc819bddc94d71627f5269682edf018
+  languageName: node
+  linkType: hard
+
+"filter-obj@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "filter-obj@npm:1.1.0"
+  checksum: 10c0/071e0886b2b50238ca5026c5bbf58c26a7c1a1f720773b8c7813d16ba93d0200de977af14ac143c5ac18f666b2cfc83073f3a5fe6a4e996c49e0863d5500fccf
   languageName: node
   linkType: hard
 
@@ -4837,7 +4904,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minimist@npm:^1.2.5":
+"minimist@npm:^1.2.5, minimist@npm:^1.2.8":
   version: 1.2.8
   resolution: "minimist@npm:1.2.8"
   checksum: 10c0/19d3fcdca050087b84c2029841a093691a91259a47def2f18222f41e7645a0b7c44ef4b40e88a1e58a40c84d2ef0ee6047c55594d298146d0eb3f6b737c20ce6
@@ -5210,6 +5277,33 @@ __metadata:
   checksum: 10c0/16bb722042dcba93892c50db2201df6aeea9c3dd60e2f7bc18b36f23c610d136f52a5946908817f6fdd4139219fa4b177f952b9831039078b4c8730fa026b180
   languageName: node
   linkType: hard
+
+"oazapfts@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "oazapfts@npm:6.1.0"
+  dependencies:
+    "@apidevtools/swagger-parser": "npm:^10.1.0"
+    lodash: "npm:^4.17.21"
+    minimist: "npm:^1.2.8"
+    swagger2openapi: "npm:^7.0.8"
+    tapable: "npm:^2.2.1"
+    typescript: "npm:^5.4.5"
+  peerDependencies:
+    "@oazapfts/runtime": "*"
+  bin:
+    oazapfts: cli.js
+  checksum: 10c0/53b5d6b37a75ecbbf04e8a4b5328042df6986ba8b4625cc5e5eab287afab920a52cbd53075ed4558ac67035d68ff972816695160c5c8b109412d3b1d77de502a
+  languageName: node
+  linkType: hard
+
+"oazapfts@workspace:packages/oazapfts":
+  version: 0.0.0-use.local
+  resolution: "oazapfts@workspace:packages/oazapfts"
+  dependencies:
+    "@oazapfts/runtime": "npm:^1.0.3"
+    oazapfts: "npm:^6.1.0"
+  languageName: unknown
+  linkType: soft
 
 "object-inspect@npm:^1.13.1":
   version: 1.13.1
@@ -5823,6 +5917,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prettier@npm:^3.2.5":
+  version: 3.3.2
+  resolution: "prettier@npm:3.3.2"
+  bin:
+    prettier: bin/prettier.cjs
+  checksum: 10c0/39ed27d17f0238da6dd6571d63026566bd790d3d0edac57c285fbab525982060c8f1e01955fe38134ab10f0951a6076da37f015db8173c02f14bc7f0803a384c
+  languageName: node
+  linkType: hard
+
 "proc-log@npm:^3.0.0":
   version: 3.0.0
   resolution: "proc-log@npm:3.0.0"
@@ -5865,6 +5968,18 @@ __metadata:
   version: 2.3.1
   resolution: "punycode@npm:2.3.1"
   checksum: 10c0/14f76a8206bc3464f794fb2e3d3cc665ae416c01893ad7a02b23766eb07159144ee612ad67af5e84fa4479ccfe67678c4feb126b0485651b302babf66f04f9e9
+  languageName: node
+  linkType: hard
+
+"query-string@npm:^7.1.3":
+  version: 7.1.3
+  resolution: "query-string@npm:7.1.3"
+  dependencies:
+    decode-uri-component: "npm:^0.2.2"
+    filter-obj: "npm:^1.1.0"
+    split-on-first: "npm:^1.0.0"
+    strict-uri-encode: "npm:^2.0.0"
+  checksum: 10c0/a896c08e9e0d4f8ffd89a572d11f668c8d0f7df9c27c6f49b92ab31366d3ba0e9c331b9a620ee747893436cd1f2f821a6327e2bc9776bde2402ac6c270b801b2
   languageName: node
   linkType: hard
 
@@ -6464,6 +6579,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"split-on-first@npm:^1.0.0":
+  version: 1.1.0
+  resolution: "split-on-first@npm:1.1.0"
+  checksum: 10c0/56df8344f5a5de8521898a5c090023df1d8b8c75be6228f56c52491e0fc1617a5236f2ac3a066adb67a73231eac216ccea7b5b4a2423a543c277cb2f48d24c29
+  languageName: node
+  linkType: hard
+
 "sprintf-js@npm:^1.1.3":
   version: 1.1.3
   resolution: "sprintf-js@npm:1.1.3"
@@ -6502,6 +6624,13 @@ __metadata:
   dependencies:
     mixme: "npm:^0.5.1"
   checksum: 10c0/8a4b40e1ee952869358c12bbb3da3aa9ca30c8964f8f8eef2058a3b6b2202d7a856657ef458a5f2402a464310d177f92d2e4a119667854fce4b17c05e3c180bd
+  languageName: node
+  linkType: hard
+
+"strict-uri-encode@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "strict-uri-encode@npm:2.0.0"
+  checksum: 10c0/010cbc78da0e2cf833b0f5dc769e21ae74cdc5d5f5bd555f14a4a4876c8ad2c85ab8b5bdf9a722dc71a11dcd3184085e1c3c0bd50ec6bb85fffc0f28cf82597d
   languageName: node
   linkType: hard
 
@@ -6753,6 +6882,13 @@ __metadata:
     tslib: "npm:^2.4.0"
     typescript: "npm:^4.7.4"
   checksum: 10c0/2935819c17c373f65b719ec3b8013e8aa08d8817eae9f38e6f8ff6368d51bde28395825a8f92eec1bb913e6113c17195f2b34ffebe23f90a0ce1a44390010507
+  languageName: node
+  linkType: hard
+
+"tapable@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "tapable@npm:2.2.1"
+  checksum: 10c0/bc40e6efe1e554d075469cedaba69a30eeb373552aaf41caeaaa45bf56ffacc2674261b106245bd566b35d8f3329b52d838e851ee0a852120acae26e622925c9
   languageName: node
   linkType: hard
 
@@ -7031,6 +7167,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"typanion@npm:^3.14.0, typanion@npm:^3.8.0":
+  version: 3.14.0
+  resolution: "typanion@npm:3.14.0"
+  checksum: 10c0/8b03b19844e6955bfd906c31dc781bae6d7f1fb3ce4fe24b7501557013d4889ae5cefe671dafe98d87ead0adceb8afcb8bc16df7dc0bd2b7331bac96f3a7cae2
+  languageName: node
+  linkType: hard
+
 "type-fest@npm:^0.13.1":
   version: 0.13.1
   resolution: "type-fest@npm:0.13.1"
@@ -7154,7 +7297,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"typescript@npm:5.4.5, typescript@npm:^5.1.6, typescript@npm:^5.2.2, typescript@npm:^5.4.5":
+"typescript@npm:5.4.5, typescript@npm:^5.1.6, typescript@npm:^5.2.2, typescript@npm:^5.3.3, typescript@npm:^5.4.5":
   version: 5.4.5
   resolution: "typescript@npm:5.4.5"
   bin:
@@ -7174,7 +7317,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.1.6#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.2.2#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.4.5#optional!builtin<compat/typescript>":
+"typescript@patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.1.6#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.2.2#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.3.3#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.4.5#optional!builtin<compat/typescript>":
   version: 5.4.5
   resolution: "typescript@patch:typescript@npm%3A5.4.5#optional!builtin<compat/typescript>::version=5.4.5&hash=5adc0c"
   bin:
@@ -7193,6 +7336,15 @@ __metadata:
   checksum: 10c0/e3333f887c6829dfe0ab6c1dbe0dd1e3e2aeb56c66460cb85c5440c566f900c833d370ca34eb47558c0c69e78ced4bfe09b8f4f98b6de7afed9b84b8d1dd06a1
   languageName: node
   linkType: hard
+
+"typoas@workspace:packages/typoas":
+  version: 0.0.0-use.local
+  resolution: "typoas@workspace:packages/typoas"
+  dependencies:
+    "@typoas/cli": "npm:^3.1.6"
+    "@typoas/runtime": "npm:^3.1.7"
+  languageName: unknown
+  linkType: soft
 
 "ufo@npm:^1.4.0, ufo@npm:^1.5.3":
   version: 1.5.3

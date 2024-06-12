@@ -1,0 +1,13 @@
+{
+  "name": "oazapfts",
+  "version": "1.0.0",
+  "scripts": {
+    "generate": "oazapfts ../../openapi/api.yaml dist/client.ts"
+  },
+  "devDependencies": {
+    "oazapfts": "^6.1.0"
+  },
+  "dependencies": {
+    "@oazapfts/runtime": "^1.0.3"
+  }
+}
