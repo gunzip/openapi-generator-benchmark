@@ -1,0 +1,1 @@
+{"description":"a definition which is a list of references to other definitions.","type":"array","items":{"type":"object","properties":{"id-field":{"type":"string"}},"x-readme-ref-name":"DefinitionFieldWithDash"},"x-readme-ref-name":"ListOfReferences"}

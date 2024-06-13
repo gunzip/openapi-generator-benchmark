@@ -1,0 +1,1 @@
+{"type":"object","default":{"test":[1000]},"additionalProperties":{"type":"array","items":{"type":"number"}},"x-readme-ref-name":"AdditionalpropsDefault"}

@@ -1,0 +1,18 @@
+{
+  "name": "kubb",
+  "version": "1.0.0",
+  "scripts": {
+    "generate": "kubb generate --config kubb.config.ts"
+  },
+  "devDependencies": {
+    "@kubb/cli": "^2.19.5",
+    "@kubb/core": "^2.19.5",
+    "@kubb/plugin-oas": "^2.19.5",
+    "@kubb/swagger": "^2.19.5",
+    "@kubb/swagger-ts": "^2.19.5",
+    "@kubb/swagger-zod": "^2.19.5"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  }
+}

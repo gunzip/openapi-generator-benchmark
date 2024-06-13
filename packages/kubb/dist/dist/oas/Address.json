@@ -1,0 +1,1 @@
+{"type":"object","properties":{"location":{"type":"string"},"city":{"type":"string"},"zipCode":{"type":"string","pattern":"^\\d{5}$","x-readme-ref-name":"ZipCode"}},"x-readme-ref-name":"Address"}

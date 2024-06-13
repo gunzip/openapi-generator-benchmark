@@ -1,0 +1,1 @@
+{"description":"Describes an object with a ref import","type":"object","properties":{"prop1":{"type":"object","properties":{"id":{"type":"string"}},"required":["id"],"title":"SimpleDefinition","x-readme-ref-name":"SimpleDefinition"}},"required":["prop1"],"title":"AnObjectWithRefImport","x-readme-ref-name":"AnObjectWithRefImport"}

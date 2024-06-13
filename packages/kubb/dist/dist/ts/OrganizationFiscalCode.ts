@@ -1,0 +1,1 @@
+export type OrganizationFiscalCode = string;

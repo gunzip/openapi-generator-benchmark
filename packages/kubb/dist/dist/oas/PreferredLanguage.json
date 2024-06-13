@@ -1,0 +1,1 @@
+{"type":"string","example":"it_IT","x-extensible-enum":["it_IT","en_GB","es_ES","de_DE","fr_FR"],"x-readme-ref-name":"PreferredLanguage"}
