@@ -1,0 +1,14 @@
+{
+  "name": "openapi-code-generator",
+  "version": "1.0.0",
+  "scripts": {
+    "generate": "openapi-code-generator --input ../../openapi/api30.yaml --output dist/ --input-type openapi3 --template typescript-fetch --schema-builder zod --enable-runtime-response-validation --extract-inline-schemas"
+  },
+  "devDependencies": {
+    "@nahkies/openapi-code-generator": "^0.11.0"
+  },
+  "dependencies": {
+    "@nahkies/typescript-fetch-runtime": "^0.11.0",
+    "zod": "^3.23.8"
+  }
+}
