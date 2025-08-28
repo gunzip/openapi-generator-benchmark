@@ -6,10 +6,8 @@
   "scripts": {
     "generate": "turbo run generate"
   },
-  "devDependencies": {
-    "turbo": "^1.0.0"
-  },
   "dependencies": {
+    "turbo": "^2.5.6",
     "typescript": "^5.9.2"
   }
 }

@@ -1,11 +1,12 @@
 {
-  "$schema": "https://turbo.build/schema.json",
+  "$schema": "https://turborepo.com/schema.json",
   "tasks": {
     "generate": {
-      "dependsOn": [],
-      "inputs": ["openapi/**/*", "packages/**/*"],
-      "outputs": ["{workspace}/dist/**/*"],
-      "cache": true
+      "dependsOn": ["^build"]
+    },
+    "dev": {
+      "persistent": true,
+      "cache": false
     }
   }
 }
