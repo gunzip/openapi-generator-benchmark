@@ -2,14 +2,13 @@
   "name": "swagger-typescript-api",
   "version": "1.0.0",
   "scripts": {
-    "generate:ts": "swagger-typescript-api --modular --no-client -p ../../openapi/api30.yaml -o dist --templates templates/base",
-    "generate:client": "swagger-typescript-api -p ../../openapi/api30.yaml -o dist -n client.ts",
+    "generate:ts": "swagger-typescript-api generate --patch --http-client=fetch --generate-union-enums --extract-responses --extract-response-error --extract-response-body --extract-request-params --extract-enums --extract-request-body --clean-output --modular --axios -p ../../openapi/hard.yaml -o dist --templates templates/base --route-types -r",
     "generate:zod": "ts-to-zod dist/data-contracts.ts dist/data-contracts.zod.ts",
-    "generate": "yarn generate:ts && yarn generate:zod && yarn generate:client"
+    "generate": "pnpm generate:ts && pnpm generate:zod"
   },
   "devDependencies": {
-    "swagger-typescript-api": "^13.0.5",
-    "ts-to-zod": "^3.8.5",
+    "swagger-typescript-api": "^13.2.8",
+    "ts-to-zod": "^3.15.0",
     "zod": "^3.23.8"
   }
 }

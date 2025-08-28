@@ -173,10 +173,10 @@ importers:
   packages/swagger-typescript-api:
     devDependencies:
       swagger-typescript-api:
-        specifier: ^13.0.5
+        specifier: ^13.2.8
         version: 13.2.8
       ts-to-zod:
-        specifier: ^3.8.5
+        specifier: ^3.15.0
         version: 3.15.0(@types/node@24.3.0)
       zod:
         specifier: ^3.23.8
@@ -5690,7 +5690,7 @@ snapshots:
       fs-extra: 7.0.1
       lodash.startcase: 4.4.0
       outdent: 0.5.0
-      prettier: 2.8.4
+      prettier: 2.8.8
       resolve-from: 5.0.0
       semver: 7.7.2
 
@@ -5820,7 +5820,7 @@ snapshots:
       '@changesets/types': 6.1.0
       fs-extra: 7.0.1
       human-id: 4.1.1
-      prettier: 2.8.4
+      prettier: 2.8.8
 
   '@commander-js/extra-typings@12.1.0(commander@12.1.0)':
     dependencies:
