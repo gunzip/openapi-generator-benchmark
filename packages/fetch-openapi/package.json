@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "generate": "fetch-openapi --api-doc-url http://petstore.swagger.io/v2/swagger.json --output-file-path ./api.js --preset es6"
   },
   "keywords": [],
   "author": "",
