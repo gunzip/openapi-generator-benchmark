@@ -2,10 +2,7 @@
   "name": "openapi-generator-benchmark",
   "version": "1.0.0",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
-  "packageManager": "yarn@4.1.1",
+  "packageManager": "pnpm@10.5.0",
   "scripts": {
     "generate": "turbo run generate"
   },
@@ -13,6 +10,6 @@
     "turbo": "^2.0.0"
   },
   "dependencies": {
-    "typescript": "^5.4.5"
+    "typescript": "^5.9.2"
   }
 }
