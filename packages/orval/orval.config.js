@@ -7,7 +7,7 @@ module.exports = {
       schemas: "./dist/models",
     },
     input: {
-      target: "../../openapi/api.yaml",
+      target: "../../openapi/hard.yaml",
     },
   },
 };

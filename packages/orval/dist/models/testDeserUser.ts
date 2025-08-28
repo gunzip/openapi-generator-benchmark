@@ -6,7 +6,7 @@
  * OpenAPI spec version: 1.0.0
  */
 
-export interface ObjectDefinitionWithImplicitType {
-  prop_one?: string;
-  prop_two?: string;
+export interface TestDeserUser {
+  name: string;
+  age: number;
 }

@@ -7,9 +7,7 @@
  */
 import type { SimpleDefinition } from './simpleDefinition';
 
-/**
- * Describes an object with a ref import
- */
-export interface AnObjectWithRefImport {
+export type TestAuthBearerHttp503 = {
   prop1: SimpleDefinition;
-}
+  prop2?: string;
+};
