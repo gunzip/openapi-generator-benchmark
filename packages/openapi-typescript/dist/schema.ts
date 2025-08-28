@@ -543,7 +543,7 @@ export interface components {
             status?: "value1" | "value2" | "value3";
         };
         AdditionalPropsTest: {
-            [key: string]: number[] | undefined;
+            [key: string]: number[];
         };
         AdditionalPropsTrueTest: {
             [key: string]: unknown;
@@ -554,7 +554,7 @@ export interface components {
          *       ]
          *     } */
         AdditionalpropsDefault: {
-            [key: string]: number[] | undefined;
+            [key: string]: number[];
         };
         InlinePropertyTest: {
             /** @description The device global unique identifier. */
@@ -604,7 +604,7 @@ export interface components {
             prop_two?: string;
         };
         ObjectDefinitionWithImplicitTypeAndAdditionalProperties: {
-            [key: string]: number[] | undefined;
+            [key: string]: number[];
         };
         ZipCode: string;
         Address: {

@@ -1,6 +1,25 @@
 import { makeApi, Zodios, type ZodiosOptions } from "@zodios/core";
 import { z } from "zod";
 
+const Person = z
+  .object({
+    name: z.string(),
+    address: z
+      .object({
+        location: z.string(),
+        city: z.string(),
+        zipCode: z.string().regex(/^\d{5}$/),
+      })
+      .partial()
+      .passthrough(),
+    birth: z.string().datetime({ offset: true }),
+    death: z.string(),
+    age: z.union([z.literal(20), z.literal(40), z.literal(50)]),
+    zipCode: z.string().regex(/[0-9]+/),
+  })
+  .partial()
+  .passthrough();
+const SimpleDefinition = z.object({ id: z.string() }).passthrough();
 const MessageSubject = z.string();
 const MessageBodyMarkdown = z.string();
 const MessageContent = z
@@ -20,25 +39,10 @@ const OneOfTest = z.union([
   z.object({ limited: z.boolean() }).partial().passthrough(),
   z.object({ unlimited: z.boolean() }).partial().passthrough(),
 ]);
-const NewModel = z.object({ id: z.string(), name: z.string() }).passthrough();
-const Person = z
-  .object({
-    name: z.string(),
-    address: z
-      .object({
-        location: z.string(),
-        city: z.string(),
-        zipCode: z.string().regex(/^\d{5}$/),
-      })
-      .partial()
-      .passthrough(),
-    birth: z.string().datetime({ offset: true }),
-    death: z.string(),
-    age: z.union([z.literal(20), z.literal(40), z.literal(50)]),
-    zipCode: z.string().regex(/[0-9]+/),
-  })
-  .partial()
+const testInlineBodySchema_Body = z
+  .object({ name: z.string(), age: z.number().optional() })
   .passthrough();
+const NewModel = z.object({ id: z.string(), name: z.string() }).passthrough();
 const Book = z
   .object({
     title: z.string(),
@@ -48,6 +52,9 @@ const Book = z
       .passthrough(),
   })
   .partial()
+  .passthrough();
+const TestDeserUser = z
+  .object({ name: z.string(), age: z.number().int() })
   .passthrough();
 const FiscalCode = z.string();
 const EmailAddress = z.string();
@@ -73,7 +80,6 @@ const Profile = z
     payload: z.object({}).partial().passthrough().optional(),
   })
   .passthrough();
-const SimpleDefinition = z.object({ id: z.string() }).passthrough();
 const DefinitionFieldWithDash = z
   .object({ "id-field": z.string() })
   .partial()
@@ -183,16 +189,29 @@ const ObjectDefinitionWithImplicitType = z
 const ObjectDefinitionWithImplicitTypeAndAdditionalProperties = z.record(
   z.array(z.number())
 );
+const ProblemDetails = z
+  .object({
+    type: z.string().url(),
+    title: z.string(),
+    status: z.number().int(),
+    detail: z.string(),
+    instance: z.string().url(),
+  })
+  .partial()
+  .passthrough();
 
 export const schemas = {
+  Person,
+  SimpleDefinition,
   MessageSubject,
   MessageBodyMarkdown,
   MessageContent,
   Message,
   OneOfTest,
+  testInlineBodySchema_Body,
   NewModel,
-  Person,
   Book,
+  TestDeserUser,
   FiscalCode,
   EmailAddress,
   IsInboxEnabled,
@@ -200,7 +219,6 @@ export const schemas = {
   PreferredLanguage,
   PreferredLanguages,
   Profile,
-  SimpleDefinition,
   DefinitionFieldWithDash,
   PaginationResponse,
   AllOfWithOneElementTest,
@@ -239,6 +257,7 @@ export const schemas = {
   EnumFalseTest,
   ObjectDefinitionWithImplicitType,
   ObjectDefinitionWithImplicitTypeAndAdditionalProperties,
+  ProblemDetails,
 };
 
 const endpoints = makeApi([
@@ -282,10 +301,10 @@ const endpoints = makeApi([
       {
         name: "cursor",
         type: "Query",
-        schema: z.string().optional(),
+        schema: z.string().min(1).optional(),
       },
     ],
-    response: z.void(),
+    response: Person,
     errors: [
       {
         status: 403,
@@ -313,7 +332,7 @@ const endpoints = makeApi([
       {
         name: "cursor",
         type: "Query",
-        schema: z.string().optional(),
+        schema: z.string().min(1).optional(),
       },
     ],
     response: z.void(),
@@ -321,6 +340,18 @@ const endpoints = makeApi([
       {
         status: 403,
         description: `You do not have necessary permissions for the resource`,
+        schema: z.void(),
+      },
+      {
+        status: 503,
+        description: `Another failure.`,
+        schema: z
+          .object({ prop1: SimpleDefinition, prop2: z.string().optional() })
+          .passthrough(),
+      },
+      {
+        status: 504,
+        description: `Failure.`,
         schema: z.void(),
       },
     ],
@@ -365,10 +396,10 @@ const endpoints = makeApi([
   },
   {
     method: "get",
-    path: "/test-dates",
-    alias: "testDates",
+    path: "/test-deserialization",
+    alias: "testDeserialization",
     requestFormat: "json",
-    response: Person,
+    response: TestDeserUser,
   },
   {
     method: "post",
@@ -414,6 +445,34 @@ const endpoints = makeApi([
       },
     ],
     response: z.void(),
+  },
+  {
+    method: "post",
+    path: "/test-inline-body-schema",
+    alias: "testInlineBodySchema",
+    requestFormat: "json",
+    parameters: [
+      {
+        name: "body",
+        type: "Body",
+        schema: testInlineBodySchema_Body,
+      },
+    ],
+    response: z.void(),
+  },
+  {
+    method: "post",
+    path: "/test-multi-content-types",
+    alias: "testMultiContentTypes",
+    requestFormat: "json",
+    parameters: [
+      {
+        name: "body",
+        type: "Body",
+        schema: NewModel,
+      },
+    ],
+    response: NewModel,
   },
   {
     method: "get",
@@ -493,7 +552,7 @@ const endpoints = makeApi([
       {
         name: "request-id",
         type: "Query",
-        schema: z.string().optional(),
+        schema: z.string().min(10).optional(),
       },
       {
         name: "x-header-param",
@@ -519,7 +578,7 @@ const endpoints = makeApi([
       {
         name: "pathParam",
         type: "Path",
-        schema: z.string(),
+        schema: z.string().min(5),
       },
       {
         name: "foo-bar",
@@ -534,7 +593,7 @@ const endpoints = makeApi([
       {
         name: "request-id",
         type: "Query",
-        schema: z.string().optional(),
+        schema: z.string().min(10).optional(),
       },
       {
         name: "x-header-param",
@@ -560,7 +619,7 @@ const endpoints = makeApi([
       {
         name: "request-id",
         type: "Query",
-        schema: z.string().optional(),
+        schema: z.string().min(10).optional(),
       },
     ],
     response: z.void(),
@@ -689,6 +748,20 @@ const endpoints = makeApi([
     method: "get",
     path: "/test-with-empty-response",
     alias: "testWithEmptyResponse",
+    requestFormat: "json",
+    response: z.void(),
+  },
+  {
+    method: "get",
+    path: "/test-with-overridden-security",
+    alias: "testOverriddenSecurity",
+    requestFormat: "json",
+    response: z.void(),
+  },
+  {
+    method: "get",
+    path: "/test-with-overridden-security-no-auth",
+    alias: "testOverriddenSecurityNoAuth",
     requestFormat: "json",
     response: z.void(),
   },
