@@ -6,55 +6,10 @@ Generate TypeScript interfaces, REST clients, and JSON Schemas from OpenAPI spec
 
 Forked from https://github.com/ferdikoomen/openapi-typescript-codegen
 
-## GitHub star
-
-445
-
-## Last commit
-
-5 days ago
-
-## Works on our specs
-
-Yes
-
-## Generate server types
-
-Yes.
-
-## Has runtime checks
-
-Not yet. See https://github.com/hey-api/openapi-ts/issues/591
-
-## Code quality and extensibility
-
-Clients are configurable. See https://heyapi.vercel.app/openapi-ts/clients.html#fetch-api
-
-## Footprint
-
-Very light. The generated code is very small.
-
-## Dependencies
-
-n/a
-
-## Supports
-
-- pattern: no
-
-- enum: yes
-
-- allof: yes
-
-- oneof: yes
-
-- dates: no
-
-- binary: yes
-
-- securityDefinitions: Ignored. But is it possible to pass a bearer token in the request within static configuration.
-  see also https://heyapi.vercel.app/openapi-ts/clients.html#interceptors
-
-## Conclusion
-
-We cannot consider this atm if we want runtime checks and date / pattern supports.
+no extensible enum
+no literal (enum)
+additionalprop wrong schemas
+responses are a union of TypeScript types that don't depend on status or content type
+also takes only the first one as request
+loose typing of requests (non-conforming values allowed)
+doesn't return status codes in response types
