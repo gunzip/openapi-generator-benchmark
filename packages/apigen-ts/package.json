@@ -2,9 +2,9 @@
   "name": "apigen-ts",
   "version": "1.0.0",
   "scripts": {
-    "generate": "apigen-ts ../../openapi/api.yaml dist/client.ts"
+    "generate": "apigen-ts ../../openapi/multiple.yaml dist/client.ts"
   },
   "devDependencies": {
-    "apigen-ts": "^0.1.2"
+    "apigen-ts": "^1.2.1"
   }
 }

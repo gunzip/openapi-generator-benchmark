@@ -5,7 +5,10 @@
     "generate": "pnpx @hey-api/openapi-ts"
   },
   "dependencies": {
-    "@hey-api/openapi-ts": "^0.81.1",
+    "@hey-api/openapi-ts": "^0.82.3",
     "zod": "^4.1.4"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.2"
   }
 }

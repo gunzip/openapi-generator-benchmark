@@ -1,0 +1,15 @@
+{
+  "name": "sdking",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "generate": "sdking -i ../../openapi/multiple.yaml -o ./sdk"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.2"
+  },
+  "dependencies": {
+    "sdking": "^0.1.0",
+    "zod": "^4.1.5"
+  }
+}

@@ -1,19 +1,25 @@
 import { createClient, createConfig } from "./dist/client";
-import { testMultiContentTypes } from "./dist/sdk.gen";
+import { testMultipleSuccess } from "./dist/sdk.gen";
 
-export const client = createClient(createConfig());
+export const client = createClient(
+  createConfig({
+    throwOnError: false,
+  })
+);
 
-const ret = await testMultiContentTypes({
-  body: {
-    id: "x",
-    name: "heyapi",
-  },
-});
+(async function () {
+  const ret = await testMultipleSuccess({
+    body: {
+      id: "x",
+      name: "heyapi",
+    },
+  });
 
-if (ret.request) {
-  const request = ret.request;
-}
+  if (ret.request) {
+    const request = ret.request;
+  }
 
-if (ret.data) {
-  const data = ret.data;
-}
+  if (ret.data) {
+    const data = ret.data;
+  }
+})();

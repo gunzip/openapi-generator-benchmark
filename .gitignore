@@ -133,3 +133,5 @@ out
 .turbo
 
 .pnpm-store
+dist
+*.local*

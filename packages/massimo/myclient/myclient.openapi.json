@@ -1,0 +1,141 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Test API",
+    "description": "Test API.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://localhost/api/v1"
+    },
+    {
+      "url": "https://localhost/api/v2"
+    }
+  ],
+  "security": [
+    {
+      "customToken": []
+    }
+  ],
+  "paths": {
+    "/test-multiple-success": {
+      "post": {
+        "operationId": "testMultipleSuccess",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NewModel"
+              }
+            },
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "$ref": "#/components/schemas/AnotherModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Will return a Message",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/NewModel"
+                }
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/NewModelXml"
+              }
+            }
+          },
+          "201": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AnotherModel"
+              }
+            },
+            "application/xml": {
+              "schema": {
+                "$ref": "#/components/schemas/NewModelXml"
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have necessary permissions for the resource",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Blob"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "NewModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
+      "NewModelXml": {
+        "type": "object",
+        "properties": {
+          "id-xml": {
+            "type": "string",
+            "minLength": 10
+          },
+          "name-xml": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id-xml"
+        ]
+      },
+      "AnotherModel": {
+        "type": "object",
+        "properties": {
+          "id-another": {
+            "type": "string"
+          },
+          "name-another": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id-another"
+        ]
+      },
+      "Blob": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

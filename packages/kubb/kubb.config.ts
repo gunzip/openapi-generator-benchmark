@@ -1,32 +1,38 @@
 import { defineConfig } from "@kubb/core";
+import { pluginTs } from "@kubb/plugin-ts";
+import { pluginZod } from "@kubb/plugin-zod";
 import { pluginOas } from "@kubb/plugin-oas";
-import { pluginTs } from "@kubb/swagger-ts";
-import { pluginZod } from "@kubb/swagger-zod";
 
 export default defineConfig(() => {
   return {
     root: ".",
     input: {
-      path: "../../openapi/api30.yaml",
+      path: "../../openapi/api.yaml",
     },
     output: {
-      path: "./dist",
+      path: "./generated",
     },
+
     plugins: [
-      pluginOas({
-        output: {
-          path: "./dist/oas",
-        },
-      }),
+      pluginOas(),
       pluginTs({
         output: {
-          path: "./dist/ts",
+          path: "./types",
         },
       }),
       pluginZod({
         output: {
-          path: "./dist/zod",
+          path: "./zod",
         },
+        group: {
+          type: "tag",
+          name({ group }) {
+            return `${group}Controller`;
+          },
+        },
+        typed: true,
+        unknownType: "unknown",
+        importPath: "zod",
       }),
     ],
   };

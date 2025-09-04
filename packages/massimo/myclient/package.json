@@ -1,0 +1,6 @@
+{
+  "name": "myclient",
+  "types": "./myclient.d.ts",
+  "type": "module",
+  "main": "./myclient.mjs"
+}

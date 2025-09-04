@@ -1,0 +1,19 @@
+{
+  "name": "ots",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "generate:types": "openapi-typescript ../../openapi/multiple.yaml --output ./gen/schema.d.ts",
+    "generate": "openapi-typescript-server ../../openapi/multiple.yaml --types ./schema.d.ts --output ./gen/server.ts"
+  },
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.2",
+    "openapi-typescript": "^7.9.1",
+    "openapi-typescript-server": "^0.0.11"
+  },
+  "dependencies": {
+    "express-openapi-validator": "^5.5.8",
+    "openapi-typescript-server-express": "^0.0.11",
+    "openapi-typescript-server-runtime": "^0.0.11"
+  }
+}
