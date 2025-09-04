@@ -1,1 +1,0 @@
-{"type":"object","properties":{"description":{"type":"string"},"enabled":{"type":"boolean","enum":[true]},"username":{"type":"string"}},"required":["enabled","description","username"],"x-readme-ref-name":"EnabledUserTest"}

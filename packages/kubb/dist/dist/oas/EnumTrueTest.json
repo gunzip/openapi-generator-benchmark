@@ -1,1 +1,0 @@
-{"type":"object","properties":{"flag":{"type":"boolean","enum":[true]}},"x-readme-ref-name":"EnumTrueTest"}

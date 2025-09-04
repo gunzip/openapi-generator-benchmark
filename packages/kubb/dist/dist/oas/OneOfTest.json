@@ -1,1 +1,0 @@
-{"oneOf":[{"type":"object","properties":{"limited":{"type":"boolean"}}},{"type":"object","properties":{"unlimited":{"type":"boolean"}}}],"x-readme-ref-name":"OneOfTest"}

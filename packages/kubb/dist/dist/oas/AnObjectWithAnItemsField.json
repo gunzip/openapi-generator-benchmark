@@ -1,1 +1,0 @@
-{"description":"What if a object has a field named items?\nThe case is an object like { items: [] }, which is legal","type":"object","properties":{"items":{"type":"array","items":{"type":"object","properties":{"id-field":{"type":"string"}},"x-readme-ref-name":"DefinitionFieldWithDash"}}},"required":["items"],"x-readme-ref-name":"AnObjectWithAnItemsField"}
