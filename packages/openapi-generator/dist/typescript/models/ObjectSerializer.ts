@@ -1,70 +1,10 @@
-export * from '../models/AllOfTest';
-export * from '../models/AllOfWithOneElementTest';
-export * from '../models/AllOfWithOneRefElementTest';
-export * from '../models/AllOfWithXExtensibleEnum';
-export * from '../models/AnObjectWithAnItemsField';
-export * from '../models/AnObjectWithRefImport';
-export * from '../models/Book';
-export * from '../models/BookAuthor';
-export * from '../models/BookAuthorInfo';
-export * from '../models/ConstantIntegerTest';
-export * from '../models/DefinitionFieldWithDash';
-export * from '../models/DisabledUserTest';
-export * from '../models/DisjointUnionsUserTest';
-export * from '../models/EnabledUserTest';
-export * from '../models/EnumFalseTest';
-export * from '../models/EnumTest';
-export * from '../models/EnumTrueTest';
-export * from '../models/InlinePropertyTest';
-export * from '../models/ListOfDefinitionsInner';
-export * from '../models/Message';
-export * from '../models/MessageContent';
-export * from '../models/NestedObjectTest';
-export * from '../models/NestedObjectTestNestedObject';
+export * from '../models/Blob';
 export * from '../models/NewModel';
-export * from '../models/ObjectDefinitionWithImplicitType';
-export * from '../models/OneOfTest';
-export * from '../models/OneOfTestOneOf';
-export * from '../models/OneOfTestOneOf1';
-export * from '../models/PaginationResponse';
-export * from '../models/Person';
-export * from '../models/PersonAddress';
-export * from '../models/Profile';
-export * from '../models/SimpleDefinition';
+export * from '../models/NewModelXml';
 
-import { AllOfTest } from '../models/AllOfTest';
-import { AllOfWithOneElementTest } from '../models/AllOfWithOneElementTest';
-import { AllOfWithOneRefElementTest } from '../models/AllOfWithOneRefElementTest';
-import { AllOfWithXExtensibleEnum } from '../models/AllOfWithXExtensibleEnum';
-import { AnObjectWithAnItemsField } from '../models/AnObjectWithAnItemsField';
-import { AnObjectWithRefImport } from '../models/AnObjectWithRefImport';
-import { Book } from '../models/Book';
-import { BookAuthor } from '../models/BookAuthor';
-import { BookAuthorInfo    , BookAuthorInfoAgeEnum    } from '../models/BookAuthorInfo';
-import { ConstantIntegerTest } from '../models/ConstantIntegerTest';
-import { DefinitionFieldWithDash } from '../models/DefinitionFieldWithDash';
-import { DisabledUserTest, DisabledUserTestEnabledEnum     } from '../models/DisabledUserTest';
-import { DisjointUnionsUserTest , DisjointUnionsUserTestEnabledEnum     } from '../models/DisjointUnionsUserTest';
-import { EnabledUserTest , EnabledUserTestEnabledEnum    } from '../models/EnabledUserTest';
-import { EnumFalseTest, EnumFalseTestFlagEnum   } from '../models/EnumFalseTest';
-import { EnumTest, EnumTestStatusEnum   } from '../models/EnumTest';
-import { EnumTrueTest, EnumTrueTestFlagEnum   } from '../models/EnumTrueTest';
-import { InlinePropertyTest } from '../models/InlinePropertyTest';
-import { ListOfDefinitionsInner } from '../models/ListOfDefinitionsInner';
-import { Message } from '../models/Message';
-import { MessageContent } from '../models/MessageContent';
-import { NestedObjectTest } from '../models/NestedObjectTest';
-import { NestedObjectTestNestedObject } from '../models/NestedObjectTestNestedObject';
+import { Blob } from '../models/Blob';
 import { NewModel } from '../models/NewModel';
-import { ObjectDefinitionWithImplicitType } from '../models/ObjectDefinitionWithImplicitType';
-import { OneOfTest } from '../models/OneOfTest';
-import { OneOfTestOneOf } from '../models/OneOfTestOneOf';
-import { OneOfTestOneOf1 } from '../models/OneOfTestOneOf1';
-import { PaginationResponse } from '../models/PaginationResponse';
-import { Person    , PersonAgeEnum    } from '../models/Person';
-import { PersonAddress } from '../models/PersonAddress';
-import { Profile } from '../models/Profile';
-import { SimpleDefinition } from '../models/SimpleDefinition';
+import { NewModelXml } from '../models/NewModelXml';
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -79,50 +19,12 @@ let primitives = [
                  ];
 
 let enumsMap: Set<string> = new Set<string>([
-    "BookAuthorInfoAgeEnum",
-    "ConstantIntegerTest",
-    "DisabledUserTestEnabledEnum",
-    "DisjointUnionsUserTestEnabledEnum",
-    "EnabledUserTestEnabledEnum",
-    "EnumFalseTestFlagEnum",
-    "EnumTestStatusEnum",
-    "EnumTrueTestFlagEnum",
-    "PersonAgeEnum",
 ]);
 
 let typeMap: {[index: string]: any} = {
-    "AllOfTest": AllOfTest,
-    "AllOfWithOneElementTest": AllOfWithOneElementTest,
-    "AllOfWithOneRefElementTest": AllOfWithOneRefElementTest,
-    "AllOfWithXExtensibleEnum": AllOfWithXExtensibleEnum,
-    "AnObjectWithAnItemsField": AnObjectWithAnItemsField,
-    "AnObjectWithRefImport": AnObjectWithRefImport,
-    "Book": Book,
-    "BookAuthor": BookAuthor,
-    "BookAuthorInfo": BookAuthorInfo,
-    "DefinitionFieldWithDash": DefinitionFieldWithDash,
-    "DisabledUserTest": DisabledUserTest,
-    "DisjointUnionsUserTest": DisjointUnionsUserTest,
-    "EnabledUserTest": EnabledUserTest,
-    "EnumFalseTest": EnumFalseTest,
-    "EnumTest": EnumTest,
-    "EnumTrueTest": EnumTrueTest,
-    "InlinePropertyTest": InlinePropertyTest,
-    "ListOfDefinitionsInner": ListOfDefinitionsInner,
-    "Message": Message,
-    "MessageContent": MessageContent,
-    "NestedObjectTest": NestedObjectTest,
-    "NestedObjectTestNestedObject": NestedObjectTestNestedObject,
+    "Blob": Blob,
     "NewModel": NewModel,
-    "ObjectDefinitionWithImplicitType": ObjectDefinitionWithImplicitType,
-    "OneOfTest": OneOfTest,
-    "OneOfTestOneOf": OneOfTestOneOf,
-    "OneOfTestOneOf1": OneOfTestOneOf1,
-    "PaginationResponse": PaginationResponse,
-    "Person": Person,
-    "PersonAddress": PersonAddress,
-    "Profile": Profile,
-    "SimpleDefinition": SimpleDefinition,
+    "NewModelXml": NewModelXml,
 }
 
 type MimeTypeDescriptor = {

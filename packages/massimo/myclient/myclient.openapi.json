@@ -1,138 +1,47 @@
 {
-  "openapi": "3.1.0",
+  "openapi": "3.0.0",
   "info": {
-    "title": "Test API",
-    "description": "Test API.",
+    "title": "Pet API",
     "version": "1.0.0"
   },
-  "servers": [
-    {
-      "url": "https://localhost/api/v1"
-    },
-    {
-      "url": "https://localhost/api/v2"
-    }
-  ],
-  "security": [
-    {
-      "customToken": []
-    }
-  ],
   "paths": {
-    "/test-multiple-success": {
-      "post": {
-        "operationId": "testMultipleSuccess",
-        "requestBody": {
-          "required": true,
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/NewModel"
-              }
-            },
-            "application/x-www-form-urlencoded": {
-              "schema": {
-                "$ref": "#/components/schemas/AnotherModel"
-              }
+    "/pet/{petId}": {
+      "get": {
+        "summary": "Get pet by ID",
+        "parameters": [
+          {
+            "name": "petId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
             }
           }
-        },
+        ],
         "responses": {
           "200": {
-            "description": "Will return a Message",
+            "description": "Success",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/NewModel"
-                }
-              }
-            },
-            "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/NewModelXml"
-              }
-            }
-          },
-          "201": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AnotherModel"
-              }
-            },
-            "application/xml": {
-              "schema": {
-                "$ref": "#/components/schemas/NewModelXml"
-              }
-            }
-          },
-          "403": {
-            "description": "You do not have necessary permissions for the resource",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/Blob"
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
           },
           "404": {
-            "description": "Not found"
-          }
-        }
-      }
-    }
-  },
-  "components": {
-    "schemas": {
-      "NewModel": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "minLength": 1
+            "description": "Pet not found"
           },
-          "name": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "id"
-        ]
-      },
-      "NewModelXml": {
-        "type": "object",
-        "properties": {
-          "id-xml": {
-            "type": "string",
-            "minLength": 10
-          },
-          "name-xml": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "id-xml"
-        ]
-      },
-      "AnotherModel": {
-        "type": "object",
-        "properties": {
-          "id-another": {
-            "type": "string"
-          },
-          "name-another": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "id-another"
-        ]
-      },
-      "Blob": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
+          "default": {
+            "description": "Unexpected error"
           }
         }
       }

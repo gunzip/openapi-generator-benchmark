@@ -2,9 +2,10 @@
   "name": "typoas",
   "version": "1.0.0",
   "scripts": {
-    "generate": "yarn dlx @typoas/cli generate -i ../../openapi/api30.yaml -o dist/client.ts"
+    "generate": "pnpx @typoas/cli generate -i ../../openapi/multiple.yaml -o dist/client.ts"
   },
-  "dependencies": {
-    "@typoas/runtime": "^3.1.7"
+  "devDependencies": {
+    "@tsconfig/node22": "^22.0.2",
+    "@typoas/runtime": "^4.2.0"
   }
 }

@@ -30,7 +30,7 @@ export interface NewModel {
      * @type {string}
      * @memberof NewModel
      */
-    name: string;
+    name?: string;
 }
 
 /**
@@ -38,7 +38,6 @@ export interface NewModel {
  */
 export function instanceOfNewModel(value: object): value is NewModel {
     if (!('id' in value) || value['id'] === undefined) return false;
-    if (!('name' in value) || value['name'] === undefined) return false;
     return true;
 }
 
@@ -53,7 +52,7 @@ export function NewModelFromJSONTyped(json: any, ignoreDiscriminator: boolean): 
     return {
         
         'id': json['id'],
-        'name': json['name'],
+        'name': json['name'] == null ? undefined : json['name'],
     };
 }
 

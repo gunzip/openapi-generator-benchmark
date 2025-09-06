@@ -6,8 +6,6 @@ info:
 servers:
   - url: https://localhost/api/v1
   - url: https://localhost/api/v2
-security:
-  - customToken: []
 paths:
   /test-multiple-success:
     post:
@@ -46,6 +44,12 @@ paths:
                 $ref: "#/components/schemas/Blob"
         "404":
           description: "Not found"
+        default:
+          description: "You do not have necessary permissions for the resource"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Blob"
 
 components:
   schemas:

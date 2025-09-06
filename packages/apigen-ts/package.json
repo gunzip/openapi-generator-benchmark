@@ -2,7 +2,7 @@
   "name": "apigen-ts",
   "version": "1.0.0",
   "scripts": {
-    "generate": "apigen-ts ../../openapi/multiple.yaml dist/client.ts"
+    "generate": "apigen-ts ../../openapi/multiple.yaml dist/client.ts --parse-dates"
   },
   "devDependencies": {
     "apigen-ts": "^1.2.1"

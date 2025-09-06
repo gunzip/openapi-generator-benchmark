@@ -2,13 +2,13 @@
   "name": "openapi-generator",
   "version": "1.0.0",
   "scripts": {
-    "generate:typescript": "openapi-generator-cli generate -i ../../openapi/api.yaml -g typescript -o dist/typescript",
-    "generate:typescript-node": "openapi-generator-cli generate -i ../../openapi/api.yaml -g typescript-node -o dist/typescript-node",
-    "generate:typescript-axios": "openapi-generator-cli generate -i ../../openapi/api.yaml -g typescript-axios -o dist/typescript-axios",
-    "generate:typescript-fetch": "openapi-generator-cli generate -i ../../openapi/api.yaml -g typescript-fetch -o dist/typescript-fetch",
+    "generate:typescript": "openapi-generator-cli generate -i ../../openapi/multiple.yaml -g typescript -o dist/typescript",
+    "generate:typescript-node": "openapi-generator-cli generate -i ../../openapi/multiple.yaml -g typescript-node -o dist/typescript-node",
+    "generate:typescript-axios": "openapi-generator-cli generate -i ../../openapi/multiple.yaml -g typescript-axios -o dist/typescript-axios",
+    "generate:typescript-fetch": "openapi-generator-cli generate -i ../../openapi/multiple.yaml -g typescript-fetch -o dist/typescript-fetch",
     "generate": "npm run generate:typescript && npm run generate:typescript-node && npm run generate:typescript-axios && npm run generate:typescript-fetch"
   },
   "devDependencies": {
-    "@openapitools/openapi-generator-cli": "^2.13.4"
+    "@openapitools/openapi-generator-cli": "^2.23.1"
   }
 }

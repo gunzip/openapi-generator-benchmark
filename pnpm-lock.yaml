@@ -79,7 +79,7 @@ importers:
     dependencies:
       openapi-client-axios:
         specifier: ^7.5.5
-        version: 7.7.0(axios@1.11.0)(js-yaml@4.1.0)
+        version: 7.7.0(axios@1.11.0(debug@4.4.1))(js-yaml@4.1.0)
     devDependencies:
       lodash:
         specifier: ^4.17.21
@@ -119,7 +119,7 @@ importers:
   packages/openapi-generator:
     devDependencies:
       '@openapitools/openapi-generator-cli':
-        specifier: ^2.13.4
+        specifier: ^2.23.1
         version: 2.23.1(@types/node@24.3.0)
 
   packages/openapi-io-ts:
@@ -235,10 +235,13 @@ importers:
         version: 0.5.0(@types/node@24.3.0)(openapi-types@12.1.3)
 
   packages/typoas:
-    dependencies:
+    devDependencies:
+      '@tsconfig/node22':
+        specifier: ^22.0.2
+        version: 22.0.2
       '@typoas/runtime':
-        specifier: ^3.1.7
-        version: 3.1.7
+        specifier: ^4.2.0
+        version: 4.2.0
 
 packages:
 
@@ -1569,8 +1572,8 @@ packages:
     peerDependencies:
       typescript: '*'
 
-  '@typoas/runtime@3.1.7':
-    resolution: {integrity: sha512-ieeKPgpgvlYRNZxoMoGwvC2EK7ovhaGf85kGwrCuu4y+c0MWDt01Suv/g6eqbiExnLuyyN/HrqUxTSIKlTzV9g==}
+  '@typoas/runtime@4.2.0':
+    resolution: {integrity: sha512-URUnsZIwjPOHyMMe4Cu6uh0eu6SDFFZ8ijqEsKzOw+JEe23fGcPOeOYev9VUC/QGu06sAnXV01zxGD1G4sH7ow==}
 
   '@zodios/core@10.9.6':
     resolution: {integrity: sha512-aH4rOdb3AcezN7ws8vDgBfGboZMk2JGGzEq/DtW65MhnRxyTGRuLJRWVQ/2KxDgWvV2F5oTkAS+5pnjKbl0n+A==}
@@ -7477,7 +7480,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typoas/runtime@3.1.7':
+  '@typoas/runtime@4.2.0':
     dependencies:
       query-string: 7.1.3
 
@@ -10409,7 +10412,7 @@ snapshots:
       openapi-types: 12.1.3
       qs: 6.14.0
 
-  openapi-client-axios@7.7.0(axios@1.11.0)(js-yaml@4.1.0):
+  openapi-client-axios@7.7.0(axios@1.11.0(debug@4.4.1))(js-yaml@4.1.0):
     dependencies:
       axios: 1.11.0(debug@4.4.1)
       bath-es5: 3.0.3
@@ -10532,7 +10535,7 @@ snapshots:
       koa-router: 12.0.1
       koa-static: 5.0.0
       openapi-backend: 5.15.0
-      openapi-client-axios: 7.7.0(axios@1.11.0)(js-yaml@4.1.0)
+      openapi-client-axios: 7.7.0(axios@1.11.0(debug@4.4.1))(js-yaml@4.1.0)
       swagger-editor-dist: 4.14.6
       swagger-ui-dist: 5.27.1
       swagger2openapi: 7.0.8

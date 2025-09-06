@@ -2,6 +2,9 @@
   "name": "massimo",
   "type": "module",
   "version": "1.0.0",
+  "scripts": {
+    "generate": "pnpx massimo-cli ./default.yaml --name myclient -t --full-response --full-request --validate-response --module esm"
+  },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.2"
   },

@@ -14,7 +14,7 @@ import { HttpFile } from '../http/http';
 
 export class NewModel {
     'id': string;
-    'name': string;
+    'name'?: string;
 
     static readonly discriminator: string | undefined = undefined;
 
